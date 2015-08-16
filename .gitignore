@@ -1,0 +1,9 @@
+
+# ignore temp file
+
+*~
+*.swp
+*.swap
+
+
+
