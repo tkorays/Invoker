@@ -1,11 +1,7 @@
-<?php 
-
-namespace Boor;
-
+<?php
+namespace Invoker;
 class Singleton {
-
     private $singletons = [];
-
     protected static $instance;
     private function __construct(){}
     private function __clone(){}
@@ -15,7 +11,6 @@ class Singleton {
         }
         return self::$instance;
     }
-
     public function Wrap($classname,$name=null){
         $usename = $name==null?$classname:$name;
         if(array_key_exists($usename,$this->singletons)){
@@ -36,7 +31,4 @@ class Singleton {
             unset($this->singletons[$name]);
         }
     }
-
 }
-
-
